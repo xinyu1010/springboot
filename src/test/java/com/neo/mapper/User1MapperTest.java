@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.neo.entity.UserEntity;
+import com.neo.entity.UserInitData;
 import com.neo.enums.UserSexEnum;
 
 @RunWith(SpringRunner.class)
@@ -19,8 +20,17 @@ public class User1MapperTest {
 
 	@Autowired
 	private User1Mapper userMapper;
-
+	
+	
 	@Test
+	public void testInsertInfo() throws Exception{
+		List<UserEntity> data = UserInitData.addInfoSum(200);
+		userMapper.insertInfo(data);
+	}
+	
+	
+
+	/*@Test
 	public void testInsert() throws Exception {
 		userMapper.insert(new UserEntity("aa", "a123456", UserSexEnum.MAN));
 		userMapper.insert(new UserEntity("bb", "b123456", UserSexEnum.WOMAN));
@@ -47,6 +57,6 @@ public class User1MapperTest {
 		user.setNickName("neo");
 		userMapper.update(user);
 		Assert.assertTrue(("neo".equals(userMapper.getOne(6l).getNickName())));
-	}
+	}*/
 
 }
