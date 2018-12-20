@@ -4,6 +4,13 @@ import java.util.List;
 
 import com.neo.entity.UserEntity;
 
+/***
+ * 
+ * 添加多条用户信息
+ * 
+ * @author 稚初
+ *
+ */
 public class User1Provider {
 	
 	

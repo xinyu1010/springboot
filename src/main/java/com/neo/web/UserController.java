@@ -42,9 +42,9 @@ public class UserController {
         user2Mapper.update(user);
     }
     
-    @RequestMapping(value="/delete/{id}")
+    /*@RequestMapping(value="/delete/{id}")
     public void delete(@PathVariable("id") Long id) {
         user1Mapper.delete(id);
-    }
+    }*/
     
 }

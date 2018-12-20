@@ -22,12 +22,19 @@ public class User1MapperTest {
 	private User1Mapper userMapper;
 	
 	
-	@Test
+/*	@Test
 	public void testInsertInfo() throws Exception{
-		List<UserEntity> data = UserInitData.addInfoSum(200);
+		List<UserEntity> data = UserInitData.addInfoSum(20000);
 		userMapper.insertInfo(data);
 	}
+	*/
 	
+	@Test
+	public void testSelectInfo() throws Exception{
+		
+		userMapper.selectInfo("MAN", 100, 20);
+		
+	}
 	
 
 	/*@Test
