@@ -46,6 +46,9 @@ public interface User1Mapper {
 	public void insertInfo(@Param("list") List<UserEntity> list);
 	
 	
+	@InsertProvider(type = User1Provider.class,method = "insertUser")
+	public void insertUser(@Param("data") UserEntity data);
+	
 	
 	
 

@@ -28,8 +28,15 @@ public class User1MapperTest {
 			List<UserEntity> data = UserInitData.addInfoSum(40000);
 			userMapper.insertInfo(data);
 		}
-		}
+	}
 		
+	/*@Test
+	public void testInserUser() throws Exception{
+		for (int i = 0; i < 5; i++) {
+			UserEntity data = UserInitData.addSum();
+			userMapper.insertUser(data);
+		}
+	}*/
 	
 	
 	/*@Test

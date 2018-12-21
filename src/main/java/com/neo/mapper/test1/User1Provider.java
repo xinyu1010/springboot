@@ -29,12 +29,18 @@ public class User1Provider {
 				sql.append("'"+user.getNickName()+"',");
 				sql.append("'"+user.getUserSex()+"'");
 				sql.append(")");
-			
-			
 		}
-		
 		return sql.toString();
+	}
+	
+	
+	
+	public static String insertUser(UserEntity userEntity) {
+		String sql = "INSERT INTO users(userName,passWord,nickName,userSex) "
+				+ "values ('"+userEntity.getUserName()+"','"+userEntity.getPassWord()+"','"
+				+userEntity.getNickName()+"','"+userEntity.getUserSex()+"')";
 		
+		return sql;
 	}
 	
 

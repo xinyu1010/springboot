@@ -28,5 +28,19 @@ public class UserInitData {
 		return result;
 	}
 	
+	
+	
+public static UserEntity addSum(){
+			UserEntity u = new UserEntity();
+		
+			
+			u.setUserName("恭喜发财");
+			u.setPassWord("红包拿来");
+			u.setNickName("新年大吉");
+			u.setUserSex(UserSexEnum.MAN);
+			
+		return u;
+	}
+	
 
 }
