@@ -33,13 +33,14 @@ public class UserController {
 	
 	@RequestMapping("/getFile/{id}")
 	public String load(@PathVariable("id") Long id,String userFileUrl) {
-		
+		//通过ID查出UserEntity的属性值
 		UserEntity entity = userServer.load(id);
+		//获取UserEntity的UserFileUrl值
 		String url = entity.getUserFileUrl();
+		//调用userServer.loadFile()方法读取数据
 		String string = userServer.loadFile(url);
 		
-		
-		 return string;
+		return string;
 	}
 	
     @RequestMapping("/getUser")
