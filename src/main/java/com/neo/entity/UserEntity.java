@@ -11,6 +11,7 @@ public class UserEntity implements Serializable {
 	private String userName;
 	private String passWord;
 	private UserSexEnum userSex;
+	private String userFileUrl;
 	private String nickName;
 
 	public UserEntity() {
@@ -68,6 +69,14 @@ public class UserEntity implements Serializable {
 	public String toString() {
 		// TODO Auto-generated method stub
 		return "userName " + this.userName + ", pasword " + this.passWord + "sex " + userSex.name();
+	}
+
+	public String getUserFileUrl() {
+		return userFileUrl;
+	}
+
+	public void setUserFileUrl(String userFileUrl) {
+		this.userFileUrl = userFileUrl;
 	}
 
 }

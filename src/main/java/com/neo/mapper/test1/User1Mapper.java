@@ -12,9 +12,12 @@ public interface User1Mapper {
 	@Select("SELECT * FROM users")
 	List<UserEntity> getAll();
 
-	/*@Select("SELECT * FROM users WHERE id = #{id}")
-	UserEntity getOne(Long id);S
-	*/
+	@Select("SELECT * FROM users WHERE id = #{id}")
+	UserEntity getOne(Long id);
+	
+	
+	
+	
 	
 	
 	String sql = "SELECT * FROM users WHERE id >=(SELECT id FROM users WHERE "

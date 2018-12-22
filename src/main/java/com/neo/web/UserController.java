@@ -2,7 +2,12 @@ package com.neo.web;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import com.neo.mapper.test1.User1Mapper;
+
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,12 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.neo.entity.UserEntity;
 import com.neo.mapper.test2.User2Mapper;
+import com.neo.server.UserServer;
 
 @RestController
 public class UserController {
 
     @Autowired
     private User1Mapper user1Mapper;
+    
+    @Autowired
+    UserServer userServer;
 
 	@Autowired
 	private User2Mapper user2Mapper;
@@ -24,6 +33,17 @@ public class UserController {
 	public List<UserEntity> getUsers() {
 		List<UserEntity> users=user1Mapper.getAll();
 		return users;
+	}
+	
+	@RequestMapping("/getFile/{id}")
+	public String load(@PathVariable("id") Long id,String userFileUrl) {
+		
+		UserEntity entity = userServer.load(id);
+		String url = entity.getUserFileUrl();
+		String string = userServer.loadFile(url);
+		
+		
+		 return string;
 	}
 	
     @RequestMapping("/getUser")
