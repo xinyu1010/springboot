@@ -25,12 +25,9 @@ public class UserServer {
 	
 	
 	
-	public String loadFile(String context) {
-		
-		
-       
+	public String loadFile(String realPath) {
         	// 1.定义目标文件
-     		File file = new File(context);
+     		File file = new File(realPath);
      		// 2.创建一个流，指向目标文件
      		InputStream is = null;
      		try {
