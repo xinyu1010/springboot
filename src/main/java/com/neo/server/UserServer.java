@@ -59,7 +59,7 @@ public class UserServer {
      				// 将byte数组读取到的有效字节转换成字符串
      				String string = new String(array, 0, count);
      				String str = new String(string.toString().getBytes("UTF-8")); 
-     				System.out.print(str);
+     				
      				count = is.read(array);
      				return str;
      			}
