@@ -3,7 +3,6 @@ package com.neo.mapper;
 import java.util.List;
 
 import com.neo.mapper.test1.User1Mapper;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.neo.entity.UserEntity;
 import com.neo.entity.UserInitData;
-import com.neo.enums.UserSexEnum;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

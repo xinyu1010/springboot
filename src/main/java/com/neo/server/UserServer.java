@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +22,23 @@ public class UserServer {
 	public UserEntity load(long id) {
 		return user1Mapper.getOne(id);
 	}
+	
+	
+	/***
+	 * 随机生成6位数的随机数
+	 * @return
+	 *//*
+	public int yzm() {
+		Random random = new Random();
+		int nextInt = random.nextInt(1000000);
+		
+		return nextInt;
+	}*/
+		
+		
+		
+		
+	
 	
 	
 	

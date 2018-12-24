@@ -1,5 +1,6 @@
 package com.neo.web;
 
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -55,11 +56,25 @@ public class UserController {
 		return string;
 	}
 	
-    @RequestMapping("/getUser")
-    public UserEntity getUser(Long id) {
-    	UserEntity user=user2Mapper.getOne(id);
+    @RequestMapping("/getUser/{id}")
+    public UserEntity getUser(@PathVariable("id") Long id) {
+    	UserEntity user=user1Mapper.getOne(id);
+    	
         return user;
     }
+    
+   /* *//**
+     * 随机生成6位数的随机数
+     * @return
+     *//*
+    @RequestMapping("/getUsers")
+	public int  getUsers() {
+    	int yzm = userServer.yzm();
+		return yzm;
+	}*/
+    
+    
+    
     
     @RequestMapping("/add")
     public void save(UserEntity user) {

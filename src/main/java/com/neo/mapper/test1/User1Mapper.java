@@ -1,7 +1,6 @@
 package com.neo.mapper.test1;
 
 import com.neo.entity.UserEntity;
-import com.neo.enums.UserSexEnum;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
